@@ -1,5 +1,6 @@
 [
   {"section":"title"},
   {"section":"install"},
-  {"section":"clone"}
+  {"section":"create"},
+  {"section":"branch"}
 ]
