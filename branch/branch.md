@@ -170,21 +170,22 @@ $ cat hello.sh        <span class="comment"># master version</span>
 
 
 
-!SLIDE
-
-## This kind of merge is known as a
-
-<h2><span style="color: red;">fast-forward</span> merge because the</h2>
-
-## merged branch was a direct descendent
-
-
-
 !SLIDE center
 
 ## Both branches now point at the same commit
 
 ![merge-uppercase](merge-uppercase.png)
+
+
+
+
+!SLIDE
+
+## This kind of merge is known as a
+
+<h2><span style="color: red;">fast-forward merge</span> because the</h2>
+
+## merged branch was a direct descendent
 
 
 
@@ -296,5 +297,112 @@ $ cat hello.sh        <span class="comment"># master version</span>
     $ git diff          <span class="comment"># newest change</span>
     $ git diff --staged <span class="comment"># prior change</span>
     $ git add .         <span class="comment"># add again</span>
-    $ git commit -m 'added goodbye file'
 </pre>
+
+
+
+!SLIDE
+
+# Fixing mistakes
+
+
+
+!SLIDE gitcmd
+
+# git commit --amend
+
+## Add content to an existing commit
+
+<pre>
+           $ git commit --amend
+</pre>
+
+
+
+!SLIDE center
+
+## Recap of forked lineage
+
+![double-diverge](double-diverge.png)
+
+
+
+!SLIDE
+
+## Merge "greeting" into "master"
+
+               $ git merge greeting
+
+
+
+!SLIDE center
+
+## A new merge commit (C5) has been created
+
+![recursive](recursive.png)
+
+
+
+!SLIDE
+
+## This kind of merge is known as
+
+<h2>a <span style="color: red;">recursive merge</span> and</h2>
+
+## uses a 3-way merge strategy
+
+
+
+!SLIDE
+
+# The power of Undo
+
+
+
+!SLIDE
+
+# First, a word about references
+
+## A reference is a way to refer to a commit
+
+
+
+!SLIDE bullets
+
+# Examples:
+
+* 5c673e53912d86eb771ee0ab0c678ecffa4b939c
+* 5c673e5
+* master
+* refs/heads/master
+* HEAD
+
+
+
+!SLIDE
+
+## "HEAD" is a special kind of reference
+
+![head](head.png)
+
+
+
+!SLIDE gitcmd
+
+# git reset --hard
+
+## Reset a branch and working dir
+
+              $ git reset --hard head^
+
+
+
+!SLIDE center
+
+## master branch is now pointing to C4.
+## C5 still exists, but is dangling.
+
+![reset](reset.png)
+
+
+

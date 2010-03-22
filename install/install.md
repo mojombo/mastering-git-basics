@@ -1,4 +1,4 @@
-!SLIDE
+!SLIDE reverse
 
 # Installing Git
 
