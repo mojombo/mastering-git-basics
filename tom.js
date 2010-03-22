@@ -1,5 +1,5 @@
 $(function(){
   setTimeout(function() {
     $("div.reverse").parent("div.slide").addClass("reversed")
-  }, 500)
+  }, 1000)
 })

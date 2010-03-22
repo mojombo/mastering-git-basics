@@ -118,6 +118,19 @@ $ git add hello.sh  <span class="comment"># add content to index</span>
 
 !SLIDE gitcmd
 
+# git status
+
+## Show what files have changed
+
+<pre>
+               $ git status
+</pre>
+
+
+
+
+!SLIDE gitcmd
+
 # git diff
 
 ## Show diff between index and working dir
@@ -168,12 +181,12 @@ $ git add hello.sh  <span class="comment"># add content to index</span>
 
 !SLIDE gitcmd
 
-# git diff --cached
+# git diff --staged
 
 ## Show diff between commit and index
 
 <pre>
-            $ git diff --cached
+            $ git diff --staged
 </pre>
 
 
