@@ -8,9 +8,9 @@
 
 ## Make a directory for your new project
 
-    $ cd path/to/repos
-    $ mkdir hello
-    $ cd hello
+               $ cd path/to/repos
+               $ mkdir hello
+               $ cd hello
 
 
 
@@ -126,7 +126,7 @@ $ git add goodbye.sh <span class="comment"># add content to index</span>
 
 !SLIDE
 
-## Make some changes
+## Make some ambitious changes
 
 <pre>
      $ vim hello.sh  <span class="comment"># modify the file</span>
@@ -177,7 +177,7 @@ $ git add goodbye.sh <span class="comment"># add content to index</span>
 
 # git add -p
 
-## Interactively add change hunks
+## Interactively add changed hunks
 
 <pre>
                $ git add -p
@@ -195,11 +195,9 @@ $ git add goodbye.sh <span class="comment"># add content to index</span>
 
 !SLIDE
 
-# git diff now shows nothing!
+# **git diff** now shows nothing!
 
 ## Where did it go?
-
-                    $ git diff
 
 
 
@@ -245,6 +243,15 @@ $ git add goodbye.sh <span class="comment"># add content to index</span>
 
 # Recap
 
-## Two commits: C0 is parent of C1
+## Two commits, C0 and C1
 
 ![history2](history2.png)
+
+
+
+!SLIDE center
+
+## Ever commit has zero or
+## more parent commits
+
+![history2a](history2a.png)
