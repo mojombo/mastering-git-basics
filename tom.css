@@ -10,3 +10,13 @@ div.gitcmd h1 {
 .comment {
   color: gray;
 }
+
+strong {
+  color: red;
+  font-weight: normal;
+}
+
+em {
+  color: green;
+  font-style: normal;
+}

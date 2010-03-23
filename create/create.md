@@ -47,6 +47,7 @@
 ## Write some code
 
                   $ vim hello.sh
+                  $ vim goodbye.sh
 
 
 
@@ -55,7 +56,8 @@
 # git add
 
 <pre>
-$ git add hello.sh  <span class="comment"># add content to index</span>
+$ git add hello.sh   <span class="comment"># add content to index</span>
+$ git add goodbye.sh <span class="comment"># add content to index</span>
 </pre>
 
 
@@ -65,6 +67,18 @@ $ git add hello.sh  <span class="comment"># add content to index</span>
 ## Index now contains working dir content
 
 ![add](add.png)
+
+
+
+!SLIDE gitcmd
+
+# git status
+
+## Show the status of index and working dir
+
+<pre>
+               $ git status
+</pre>
 
 
 
@@ -85,6 +99,18 @@ $ git add hello.sh  <span class="comment"># add content to index</span>
 <h2 style="color: red">NOT THE WORKING DIRECTORY</h2>
 
 ![commit-c0](commit-c0.png)
+
+
+
+!SLIDE gitcmd
+
+# git log
+
+## Print a log of commits
+
+<pre>
+                 $ git log
+</pre>
 
 
 
@@ -116,11 +142,9 @@ $ git add hello.sh  <span class="comment"># add content to index</span>
 
 
 
-!SLIDE gitcmd
+!SLIDE
 
-# git status
-
-## Show what files have changed
+## Review the changed files
 
 <pre>
                $ git status

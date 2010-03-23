@@ -18,7 +18,7 @@
 
 # The default branch is named
 
-<h1 style="color: red;">"master"</h1>
+# *master*
 
 
 
@@ -95,7 +95,7 @@
 
 !SLIDE center
 
-## Working dir now corresponds to "uppercase"
+## Working dir now corresponds to *uppercase*
 
 ![checkout-uppercase](checkout-uppercase.png)
 
@@ -122,8 +122,8 @@
 
 !SLIDE
 
-## Switch back to the "master" branch
-## Notice that working dir has been changed
+## Switch back to the *master* branch.
+## Notice that working dir has been changed.
 
 <pre>
 $ cat hello.sh        <span class="comment"># uppercase version</span>
@@ -136,7 +136,7 @@ $ cat hello.sh        <span class="comment"># master version</span>
 !SLIDE center
 
 ## Working directory is now consistent
-## with the master branch
+## with the *master* branch
 
 ![gc-master](gc-master.png)
 
@@ -182,9 +182,7 @@ $ cat hello.sh        <span class="comment"># master version</span>
 !SLIDE
 
 ## This kind of merge is known as a
-
-<h2><span style="color: red;">fast-forward merge</span> because the</h2>
-
+## **fast-forward merge** because the
 ## merged branch was a direct descendent
 
 
@@ -227,23 +225,24 @@ $ cat hello.sh        <span class="comment"># master version</span>
 
 !SLIDE
 
-## Modify the greeting, commit,
-## and switch back to master
+## Modify the greetings; commit;
+## and switch back to *master*
 
           $ vim hello.sh
+          $ vim goodbye.sh
           $ git add -p
-          $ git commit -m 'new greeting'
+          $ git commit -m 'new greetings'
           $ git checkout master
 
 
 
 !SLIDE
 
-## Create a new file on the master
-## branch and attempt to add it
+## Create a new file on *master*
+## and attempt to add it
 
 <pre>
-  $ vim goodbye.sh
+  $ vim README
   $ git add -p       <span class="comment"># nothing to review!</span>
   $ git status       <span class="comment"># find out why</span>
 </pre>
@@ -252,7 +251,7 @@ $ cat hello.sh        <span class="comment"># master version</span>
 
 !SLIDE
 
-# Tracked Files
+# File tracking
 
 ## Git remembers what files have been added.
 ## New files must be explicitly added.
@@ -275,7 +274,7 @@ $ cat hello.sh        <span class="comment"># master version</span>
 ## Oops, we forgot something...
 
 <pre>
-    $ vim goodbye.sh
+    $ vim README
     $ git status        <span class="comment"># make sure</span>
 </pre>
 
@@ -294,9 +293,10 @@ $ cat hello.sh        <span class="comment"># master version</span>
 ## Inspect the deltas, and continue
 
 <pre>
-    $ git diff          <span class="comment"># newest change</span>
-    $ git diff --staged <span class="comment"># prior change</span>
-    $ git add .         <span class="comment"># add again</span>
+     $ git diff --staged <span class="comment"># old change</span>
+     $ git diff          <span class="comment"># new change</span>
+     $ git add -p        <span class="comment"># add again</span>
+     $ git commit -m "add a readme"
 </pre>
 
 
@@ -311,9 +311,11 @@ $ cat hello.sh        <span class="comment"># master version</span>
 
 # git commit --amend
 
-## Add content to an existing commit
+## Modify the content of the **last commit**
 
 <pre>
+           $ vim README
+           $ git add -p
            $ git commit --amend
 </pre>
 
@@ -329,7 +331,7 @@ $ cat hello.sh        <span class="comment"># master version</span>
 
 !SLIDE
 
-## Merge "greeting" into "master"
+## Merge *greeting* into *master*
 
                $ git merge greeting
 
@@ -337,19 +339,37 @@ $ cat hello.sh        <span class="comment"># master version</span>
 
 !SLIDE center
 
-## A new merge commit (C5) has been created
+## A new merge commit (C5) is created
 
 ![recursive](recursive.png)
+
+
+
+!SLIDE gitcmd
+
+# git log --graph
+
+## Show the commit log with graph structure
+
+<pre>
+             $ git log --graph
+</pre>
 
 
 
 !SLIDE
 
 ## This kind of merge is known as
-
-<h2>a <span style="color: red;">recursive merge</span> and</h2>
-
+## a **recursive merge** and
 ## uses a 3-way merge strategy
+
+
+
+!SLIDE center
+
+## Three way (recursive) merge strategy
+
+![3way](3way.png)
 
 
 
@@ -374,16 +394,44 @@ $ cat hello.sh        <span class="comment"># master version</span>
 * 5c673e53912d86eb771ee0ab0c678ecffa4b939c
 * 5c673e5
 * master
-* refs/heads/master
 * HEAD
+* HEAD^^
 
 
 
 !SLIDE
 
-## "HEAD" is a special kind of reference
+## *HEAD* is a dynamic reference that
+## follows your current checkout
 
-![head](head.png)
+![head-master](head-master.png)
+
+
+
+!SLIDE
+
+## *HEAD* is a dynamic reference that
+## follows your current checkout
+
+![head-greeting](head-greeting.png)
+
+
+
+!SLIDE
+
+## *HEAD* is a dynamic reference that
+## follows your current checkout
+
+![head-master](head-master.png)
+
+
+
+!SLIDE center
+
+## Ancestry reference modifiers
+
+![backrefs](backrefs.png)
+
 
 
 
@@ -399,10 +447,45 @@ $ cat hello.sh        <span class="comment"># master version</span>
 
 !SLIDE center
 
-## master branch is now pointing to C4.
-## C5 still exists, but is dangling.
+## *master* is now pointing to C4.
+## C5 still exists, but is **dangling**.
 
 ![reset](reset.png)
+
+
+
+!SLIDE gitcmd
+
+# git reflog
+
+## Show previous values of *HEAD*
+
+                   $ git reflog
+
+
+
+!SLIDE
+
+# Let's induce a merge conflict
+
+
+
+!SLIDE
+
+## Modify a line that was also changed
+## in the *greeting* branch
+
+          $ vim hello.sh
+          $ git add -p
+          $ git commit -m 'howdy pardner'
+
+
+
+!SLIDE
+
+## Attempt to merge *greeting*
+
+               $ git merge greeting
 
 
 
