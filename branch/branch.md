@@ -301,26 +301,6 @@ $ cat hello.sh        <span class="comment"># master version</span>
 
 
 
-!SLIDE
-
-# Fixing mistakes
-
-
-
-!SLIDE gitcmd
-
-# git commit --amend
-
-## Modify the content of the **last commit**
-
-<pre>
-           $ vim README
-           $ git add -p
-           $ git commit --amend
-</pre>
-
-
-
 !SLIDE center
 
 ## Recap of forked lineage
@@ -466,7 +446,7 @@ $ cat hello.sh        <span class="comment"># master version</span>
 
 !SLIDE
 
-# Let's induce a merge conflict
+# What about merge conflicts?
 
 
 
@@ -492,7 +472,7 @@ $ cat hello.sh        <span class="comment"># master version</span>
 !SLIDE
 
 ## Cleanly merged files are staged.
-## Conflicts are left in workind dir.
+## Conflicts are left in working dir.
 
 <pre>
        $ git diff --staged  <span class="comment"># clean</span>
