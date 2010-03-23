@@ -489,3 +489,24 @@ $ cat hello.sh        <span class="comment"># master version</span>
 
 
 
+!SLIDE
+
+## Cleanly merged files are staged.
+## Conflicts are left in workind dir.
+
+<pre>
+       $ git diff --staged  <span class="comment"># clean</span>
+       $ git diff           <span class="comment"># dirty</span>
+       $ git status         <span class="comment"># summary</span>
+</pre>
+
+
+
+!SLIDE
+
+## Clean up the mess; use **git add** to mark
+## a conflicted file as properly merged.
+## Commit to seal the deal.
+
+                $ git add hello.sh
+                $ git commit
