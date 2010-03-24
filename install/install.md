@@ -28,13 +28,13 @@
 
 !SLIDE bullets
 
-# <span style="color: blue;">help.github.com</span>
+# <u>help.github.com</u>
 
 !SLIDE commandline
 
 # Initial Configuration
 
-## <span style="color: blue;">http://gist.github.com/340818</span>
+## <u>http://gist.github.com/340818</u>
 
     $ git config --global user.name "Tom Preston-Werner"
     $ git config --global user.email "tom@mojombo.com"

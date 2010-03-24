@@ -239,6 +239,17 @@ $ git add goodbye.sh <span class="comment"># add content to index</span>
 
 
 
+!SLIDE
+
+# Remember:
+
+<ol style="font-size: 300%; margin-left: 3.5em; list-style-type: decimal; line-height: 2em;">
+  <li>Make changes to working dir</li>
+  <li>Stage those changes to the index</li>
+  <li>Commit the current state of the index</li>
+</ol>
+
+
 !SLIDE center
 
 # Recap
@@ -251,7 +262,7 @@ $ git add goodbye.sh <span class="comment"># add content to index</span>
 
 !SLIDE center
 
-## Ever commit has zero or
+## Every commit has zero or
 ## more parent commits
 
 ![history2a](history2a.png)

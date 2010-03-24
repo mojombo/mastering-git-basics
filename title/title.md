@@ -3,9 +3,19 @@
 
 ## by Tom Preston-Werner
 
+
+
 !SLIDE
 
-# Before we start...
+# @mojombo
+
+
+
+!SLIDE
+
+## Before we start...
+
+
 
 !SLIDE center
 

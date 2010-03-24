@@ -120,6 +120,16 @@
 
 
 
+!SLIDE gitcmd
+
+# git branch -v
+
+## Show branches and the commits they point to
+
+                  $ git branch -v
+
+
+
 !SLIDE
 
 ## Switch back to the *master* branch.
@@ -325,18 +335,6 @@ $ cat hello.sh        <span class="comment"># master version</span>
 
 
 
-!SLIDE gitcmd
-
-# git log --graph
-
-## Show the commit log with graph structure
-
-<pre>
-             $ git log --graph
-</pre>
-
-
-
 !SLIDE
 
 ## This kind of merge is known as
@@ -350,6 +348,18 @@ $ cat hello.sh        <span class="comment"># master version</span>
 ## Three way (recursive) merge strategy
 
 ![3way](3way.png)
+
+
+
+!SLIDE gitcmd
+
+# git log --graph
+
+## Show the commit log with graph structure
+
+<pre>
+             $ git log --graph
+</pre>
 
 
 
@@ -455,9 +465,20 @@ $ cat hello.sh        <span class="comment"># master version</span>
 ## Modify a line that was also changed
 ## in the *greeting* branch
 
-          $ vim hello.sh
-          $ git add -p
-          $ git commit -m 'howdy pardner'
+                   $ vim hello.sh
+                   $ git add -p
+
+
+
+!SLIDE gitcmd
+
+# git commit --amend
+
+## Modify the content of the **last commit**
+
+<pre>
+           $ git commit --amend
+</pre>
 
 
 
